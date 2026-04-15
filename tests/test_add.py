@@ -24,14 +24,13 @@ def test_add_suma_positivo_negativo():
 
 def test_add_suma_decimales():
     """Sumar dos números decimales (float)."""
-    assert add(0.1, 0.2) == 0.3
+    assert add(0.1, 0.2) ==  pytest.approx(0.3)
 
 @pytest.mark.parametrize("a,b,expected", [
     (1, 2, 3),
     (-1, -2, -3),
     (0, 0, 0),
     (5, -3, 2),
-    (0.1, 0.2, 0.3)
 ])
 
 def test_add_parametrizado(a, b, expected):
